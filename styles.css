@@ -1,0 +1,185 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('back4.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Updated styles for the navigation bar */
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem; /* Increase the font size for navigation items */
+}
+
+nav ul li {
+    margin: 0;
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid transparent; /* Add a transparent bottom border initially */
+}
+
+nav ul li a:hover {
+    background-color: #797a7a;
+    border-bottom-color: #e5ea63; /* Change the bottom border color on hover */
+    transform: translateY(-3px); /* Add a slight upward movement on hover */
+}
+
+
+.banner {
+    background-color: #FFDD57;
+    color: #333;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #fffc62;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width:   350px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+}
+
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 50%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #menu {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adding ambient color effect */
+.product[data-color] {
+    position: relative;
+}
+
+.product[data-color]:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    background: var(--color, #f9f9f9);
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    padding: 20px;
+    max-width: 80%;
+}
+
+.popup-content {
+    overflow-y: auto;
+    max-height: 400px; /* Adjust height as needed */
+}
+
+.additional-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.additional-product {
+    flex: 0 0 calc(33.33% - 20px);
+    text-align: center;
+}
+
+.additional-product img {
+    width: 100%;
+    height: auto;
+}

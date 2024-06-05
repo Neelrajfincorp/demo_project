@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>College Canteen</title>
+	<link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+<header><img alt="College Canteen Logo" class="logo" src="image/psnsulogo.png" /></header>
+
+<nav>
+<ul>
+	<li><a href="#home">Home</a></li>
+	<li><a href="#menu">Menu</a></li>
+	<li><a href=" https://wa.me/qr/EMBL7L555Q53C1 " target="_blank"> Order Now</a></li>
+	<li><a href="#contact">Contact Us</a></li>
+</ul>
+</nav>
+
+<section class="banner">
+<h2>꧁༺𝓦𝓔'𝓡𝓔 𝓝𝓞𝓦 𝓞𝓟𝓔𝓝༻꧂</h2>
+
+
+</section>
+
+<main>
+<section id="home"><!-- Content for home section (if any) --></section>
+
+<section id="menu">
+<div class="product" data-color="red" style="--color: rgba(246, 167, 245, 0.5);"><img alt="Product 1" src="image/pro (6).jpg" />
+<h2>Aaloo Pakoda</h2>
+
+<p>10₹/Piece</p>
+</div>
+
+<div class="product" data-color="blue" style="--color: rgba(246, 167, 245, 0.5);"><img alt="Product 2" src="image/pro (1).jpg" />
+<h2>Hot coffee</h2>
+
+<p>15₹/Piece</p>
+</div>
+
+<div class="product" data-color="green" style="--color: rgba(246, 167, 245, 0.5);"><img alt="Product 3" src="image/pro (2).jpeg" />
+<h2>Soft drinks</h2>
+
+<p>25₹/Piece</p>
+</div>
+
+<div class="product" data-color="red" style="--color: rgba(246, 167, 245, 0.5);"><img alt="Product 4" src="image/pro (3).jpg" />
+<h2>Chai</h2>
+
+<p>10₹/Piece</p>
+</div>
+
+<div class="product" data-color="blue" style="--color: rgba(246, 167, 245, 0.5);"><img alt="Product 5" src="image/pro (4).jpg" />
+<h2>Mungodi</h2>
+
+<p>20₹/Piece</p>
+</div>
+
+<div class="product" data-color="green" style="--color: rgba(246, 167, 245, 0.5);"><img alt="Product 6" src="image/pro (5).jpg" />
+<h2>Samoshs</h2>
+
+<p>10₹/Piece</p>
+</div>
+
+<div class="product" data-color="red" style="--color: rgba(246, 167, 245, 0.5);"><img alt="Product 7" src="image/pro (7).jpg" />
+<h2>Chaumin</h2>
+
+<p>30₹/Piece</p>
+</div>
+
+<div class="product" data-color="blue" style="--color: rgba(246, 167, 245, 0.5);"><img alt="Product 8" src="image/pro.8.jpg" />
+<h2>cold coffee</h2>
+
+<p>30₹/Piece</p>
+</div>
+
+ <div class="product" data-color="blue" style="--color: rgba(246, 167, 245, 0.5);">
+                <img alt="Product 9" src="image/pro.9.jpeg" style="width: 350px; height: 180px;" />
+                <h2>Dhokala</h2>
+                <p>20₹/Piece</p>
+            </div>
+        </section>
+    </main>
+
+
+
+
+<footer id="contact">
+<p>&copy; 2024 College Canteen. All rights reserved.</p>
+
+<p>Contact us at: 123 College St, City, Country | Phone: (123) 456-7890 | Email: contact@collegecanteen.com</p>
+</footer>
+<div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h3>Additional Products</h3>
+            <div class="additional-products">
+                <div class="additional-product">
+                    <img src="image/e.jpg" alt="Additional Product 1">
+                    <p>Additional Product 1</p>
+                </div>
+                <div class="additional-product">
+                    <img src="image/e.jpg" alt="Additional Product 2">
+                    <p>Additional Product 2</p>
+                </div>
+                <!-- Add more additional product divs as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+
+            document.addEventListener('click', function(event) {
+                var isClickInside = popup.contains(event.target);
+                
+                if (!isClickInside) {
+                    popup.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
